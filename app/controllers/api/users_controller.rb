@@ -21,7 +21,7 @@ class Api::UsersController < ApplicationController
     if @user && @user.update(user_params)
       render :show
     else
-      render json: "Update failed", status: 422
+      render json: ["Update failed"], status: 422
     end
   end
 

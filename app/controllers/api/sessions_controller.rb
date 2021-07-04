@@ -9,7 +9,7 @@ class Api::SessionsController < ApplicationController
       login!(@user)
       render "/api/users/show"
     else
-      render json: "Login unsuccessful. Please check your email and/or password.", status: 422
+      render json: ["Login unsuccessful. Please check your email and/or password."], status: 422
     end
   end
 
@@ -20,7 +20,7 @@ class Api::SessionsController < ApplicationController
       logout!
       render json: {}
     else
-      render json: "There is no current user.", status: 404
+      render json: ["There is no current user."], status: 404
     end
   end
 
