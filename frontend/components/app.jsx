@@ -1,8 +1,9 @@
 import React from 'react';
+import NavBarContainer from "./nav/nav_bar_container";
 
 const App = () => (
   <div>
-    <h1>Welcome to PaulTrails!!! Your next adventure awaits.</h1>
+    <NavBarContainer />
   </div>
 );
 

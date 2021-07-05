@@ -14,15 +14,15 @@ const NavBar = ({ currentUser, logout }) => {
       {
         currentUser ? (
                         <div>
-                          <p>{currentUser.firstName}</p>
-                          <button onClick={logout}>Logout</button>
+                          <p>{currentUser.first_name}</p>
+                          <button onClick={logout}>Log out</button>
                         </div>
                       ) 
                     :   
                       (
                         <div>
-                          <Link to="/signup">SignUp</Link>
-                          <Link to="/login">Login</Link>
+                          <Link to="/signup">Sign up</Link>
+                          <Link to="/login">Log in</Link>
                         </div>
                       )
       }
