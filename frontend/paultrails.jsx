@@ -1,18 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { signUp, login, logout } from './util/session_api_util'
+import configureStore from './store/store';
+import Root from "./components/root";
+
+import { login, logout } from "./actions/session_actions"
 
 document.addEventListener('DOMContentLoaded', () => {
+  const store = configureStore();
   const root = document.getElementById("root");
 
+  window.store = store;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  window.login = login;
+  window.logout = logout;
   
-  
-  ReactDOM.render(<h2>Welcome to PaulTrails!</h2>, root)
+  ReactDOM.render(<Root store={store} />, root)
 });
 
 
-
-
 // window.signUp = signUp;
-// window.login = login;
-// window.logout = logout;
