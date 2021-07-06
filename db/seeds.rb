@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all # destroys all recs
+ApplicationRecord.connection.reset_pk_sequence!("users") # resets primary keys 
+demo = User.create(email: "demo@paultrails.com", first_name: "Demo", last_name: "User", password: "demopassword")

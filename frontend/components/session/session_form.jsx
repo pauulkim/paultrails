@@ -6,7 +6,19 @@ class SessionForm extends React.Component {
     this.state = this.props.formState;
     
     this.handleSubmit = this.handleSubmit.bind(this); // REVIEW - bind vs not needing to bind
+    this.demo = this.demo.bind(this);
   };
+
+  demo(e) {
+    e.preventDefault();
+    const demoUser = { email: "demo@paultrails.com", password: "demopassword" };
+
+    if (this.props.formType === "Sign Up") {
+      this.props.login(demoUser);
+    } else {
+      this.props.processForm(demoUser);
+    }
+  }
   
   update(input) {
     return e => {
@@ -77,6 +89,7 @@ class SessionForm extends React.Component {
         <p>{errors}</p>
         <p>{otherText}</p>
         <p>{otherForm}</p>
+        <p><button onClick={this.demo}>Demo User</button></p>
       </div>
     )
   }
