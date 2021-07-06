@@ -1,27 +1,27 @@
 import React from "react";
 
-// need to add errors underneath each input field
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.formState;
-
+    
     this.handleSubmit = this.handleSubmit.bind(this); // REVIEW - bind vs not needing to bind
   };
-
+  
   update(input) {
-    return (e) => {
+    return e => {
       this.setState({ [input]: e.target.value })
     }
   };
-
+  
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
   };
-
+  
+  // need to add errors underneath each input field
   render() {
-    const { errors, formType, formTitle, otherText, otherForm, processForm } = this.props;
+    const { errors, formType, formTitle, otherText, otherForm } = this.props;
 
     return (
       <div>
@@ -35,8 +35,8 @@ class SessionForm extends React.Component {
                     <input 
                       type="text"
                       placeholder="First name"
-                      value={this.state.firstName}
-                      onChange={this.update("firstName")}
+                      value={this.state.first_name}
+                      onChange={this.update("first_name")}
                       required
                     />
                   </label>
@@ -44,8 +44,8 @@ class SessionForm extends React.Component {
                     <input 
                       type="text"
                       placeholder="Last name"
-                      value={this.state.lastName}
-                      onChange={this.update("lastName")}
+                      value={this.state.last_name}
+                      onChange={this.update("last_name")}
                       required
                     />
                   </label>

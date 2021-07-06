@@ -9,8 +9,8 @@ const mSTP = (state, ownProps) => ({
   formType: "Sign Up",
   formTitle: "Create your account",
   formState: {
-    firstName: "",
-    lastName: "",
+    first_name: "",
+    last_name: "",
     email: "",
     password: ""
   },
