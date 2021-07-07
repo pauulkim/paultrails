@@ -6,7 +6,7 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import { AuthRoute } from '../util/route_util';
 import HomePageContainer from './home_page/home_page_container';
-import ParksContainer from './parks/parks_container';
+import ParkContainer from './parks/park_container';
 
 const App = () => (
   <div>
@@ -18,7 +18,7 @@ const App = () => (
     <AuthRoute path="/signup" component={SignupFormContainer} />
 
     <Route exact path="/" component={HomePageContainer} />
-    <Route path="/parks/:parkId" component={ParksContainer} />
+    <Route path="/parks/:parkId" component={ParkContainer} />
   </div>
 );
 
