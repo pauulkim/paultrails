@@ -20,5 +20,5 @@ export const requestPark = parkId => dispatch => (
 
 export const requestParkTrails = parkId => dispatch => (
   ParkApiUtil.getParkTrails(parkId)
-    .then(trails => dispatch(receiveParkTrails))
+    .then(trails => dispatch(receiveParkTrails(trails)))
 );
