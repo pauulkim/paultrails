@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 const NavBar = ({ currentUser, logout }) => {
 
   return (
-    <div>
+    <div className="nav-bar">
+      <div></div>
       {/* main title with link that navigates to home page */}
       <Link to="/">
         <h2>PaulTrails</h2>
