@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from "./components/root";
 
-import { requestParkTrails } from "./actions/park_actions";
-
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById("root");
   let store;
@@ -28,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //testing
   window.store = store;
-  window.requestParkTrails = requestParkTrails;
   
   // end testing
   
