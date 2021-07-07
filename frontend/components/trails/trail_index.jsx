@@ -1,11 +1,11 @@
 import React from "react";
 import { TrailIndexItem } from "./trail_index_item";
 
-export const TrailIndex = ({ trails }) => (
+export const TrailIndex = ({ trails, parkName }) => (
     <ul>
       {
-        trails.map( (trail, idx) => (
-          <TrailIndexItem key={idx} trail={trail}/>
+        trails.map( (trail) => (
+          <TrailIndexItem key={trail.id} trail={trail} parkName={parkName}/>
         ))
       }
     </ul>

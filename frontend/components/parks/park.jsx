@@ -29,7 +29,7 @@ class Park extends React.Component {
           <p>{park.contact}</p>
         </section>
         <section>
-            <TrailIndex trails={trails}/>
+            <TrailIndex trails={trails} parkName={park.name}/>
         </section>
       </div>
     )
