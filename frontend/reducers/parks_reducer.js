@@ -2,7 +2,7 @@ import { RECEIVE_PARK } from "../actions/park_actions";
 
 const parksReducer = (state = {}, action) => {
   Object.freeze(state);
-  let newState = Object.assign({}, state);
+  let newState = {};
 
   switch (action.type) {
     case RECEIVE_PARK:
