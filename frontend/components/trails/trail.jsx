@@ -5,9 +5,29 @@ class Trail extends React.Component {
     super(props);
   };
 
+  componentDidMount() {
+    this.props.requestTrail(this.props.trailId);
+  }
+
   render() {
-    return <h1>Welcome to the trail page</h1>
+    let { loggedIn, trail } = this.props;
+    
+    if (!trail) return null;
+
+    return (
+      <div>
+        <h2>{trail.name}</h2>
+        <p>{trail.summary}</p>
+        <p>{trail.description}</p>
+        <p>{trail.difficulty}</p>
+        <p>{trail.length}</p>
+        <p>{trail.elevation_gain}</p>
+        <p>{trail.route_type}</p>
+        <p>{`${trail.lat}, ${trail.long}`}</p>
+      </div>
+    )
   };
 };
+
 
 export default Trail;
