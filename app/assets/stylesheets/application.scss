@@ -10,13 +10,8 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  */
-
- .nav-bar {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: space-between;
- }
+ 
+@import './reset.css';
+@import './navbar_footer/nav_bar.scss';
