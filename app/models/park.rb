@@ -4,4 +4,5 @@ class Park < ApplicationRecord
 
   has_many :trails
   
+  has_one_attached :park_photo
 end
