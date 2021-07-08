@@ -12,13 +12,14 @@ class Park extends React.Component {
     this.props.requestPark(this.props.parkId) 
     this.props.requestParkTrails(this.props.parkId)
   };
-
+  
   componentDidUpdate(prevProps, prevState) {
     debugger
     if (prevProps.parkId !== this.props.parkId) {
       this.props.requestPark(this.props.parkId) 
+      this.props.requestParkTrails(this.props.parkId)
     } 
-  }
+  };
 
   render() {
     debugger
