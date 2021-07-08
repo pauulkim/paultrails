@@ -8,7 +8,7 @@ const NavBar = ({ currentUser, logout }) => {
       <div></div>
       {/* main title with link that navigates to home page */}
       <Link to="/">
-        <h2>PaulTrails</h2>
+        <h1>PaulTrails</h1>
       </Link>
       
       {/* displays different elements depending on if a user is logged in or not */}
@@ -23,9 +23,9 @@ const NavBar = ({ currentUser, logout }) => {
                       ) 
                     :   
                       (
-                        <div>
-                          <Link to="/signup">Sign up</Link>
-                          <Link to="/login">Log in</Link>
+                        <div className="session-buttons">
+                          <Link to="/signup" className="sign-up">Sign up</Link>
+                          <Link to="/login" className="log-in">Log in</Link>
                         </div>
                       )
       }
