@@ -16,7 +16,9 @@ const NavBar = ({ currentUser, logout }) => {
         currentUser ? (
                         <div>
                           <p>{currentUser.first_name}</p>
-                          <button onClick={logout}>Log out</button>
+                          <Link to="/">
+                            <button onClick={logout}>Log out</button>
+                          </Link>
                         </div>
                       ) 
                     :   
