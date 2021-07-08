@@ -7,6 +7,7 @@ import SignupFormContainer from './session/signup_form_container';
 import { AuthRoute } from '../util/route_util';
 import HomePageContainer from './home_page/home_page_container';
 import ParkContainer from './parks/park_container';
+import TrailContainer from './trails/trail_container';
 
 const App = () => (
   <div>
@@ -19,7 +20,7 @@ const App = () => (
 
     <Route exact path="/" component={HomePageContainer} />
     <Route path="/parks/:parkId" component={ParkContainer} />
-    {/* <Route path="/trail/:trailId" component={}> */}
+    <Route path="/trail/:trailId" component={TrailContainer} />
   </div>
 );
 
