@@ -3,13 +3,10 @@ import * as ParkApiUtil from "../util/park_api_util";
 export const RECEIVE_PARK = "RECEIVE_PARK";
 export const RECEIVE_PARK_TRAILS = "RECEIVE_PARK_TRAILS";
 
-export const receivePark = park => {
-  debugger
-  return {
+export const receivePark = park => ({
     type: RECEIVE_PARK,
     park
-  }
-};
+});
 
 export const receiveParkTrails = trails => ({
   type: RECEIVE_PARK_TRAILS,
