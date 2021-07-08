@@ -8,11 +8,13 @@ class Park extends React.Component {
 
   // makes request to backend and updates state, triggering a rerender with the park/trail info
   componentDidMount() {
-    this.props.requestPark(this.props.parkId)
+    debugger
+    this.props.requestPark(this.props.parkId) 
     this.props.requestParkTrails(this.props.parkId)
   };
 
   render() {
+    debugger
     const { park, trails } = this.props;
 
     if (!park) return null;
