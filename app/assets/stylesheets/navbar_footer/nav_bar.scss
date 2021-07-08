@@ -1,38 +1,31 @@
 .nav-bar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
   background-color: #fff;
-  height: 50px;
+  height: 60px;
   padding: 0 10px 0 0;
 }
 
-.nav-bar * {
-  text-decoration: none;
-  font-family: Arial, sans-serif;
+.invisible {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.nav-bar h1 {
+.main-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-size: 28px;
   font-weight: bold;
   color: #808080;
 }
 
-.session-buttons > * {
-  font-size: 13px;
-  font-weight: 700;
-  border-radius: 8px;
-  padding: 10px 15px;
-  border: 1px solid #219ad8;
-}
-
-.sign-up {
-  margin-right: 10px;
-  background: #219ad8;
-  color: #fff
-}
-
-.log-in {
-  color: #219ad8
+.session-buttons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }

@@ -5,16 +5,16 @@ const NavBar = ({ currentUser, logout }) => {
 
   return (
     <div className="nav-bar">
-      <div></div>
+      <div className="invisible"></div>
       {/* main title with link that navigates to home page */}
-      <Link to="/">
-        <h1>PaulTrails</h1>
-      </Link>
-      
+      <div className="main-logo">
+        <Link to="/">PaulTrails</Link>
+      </div>
+
       {/* displays different elements depending on if a user is logged in or not */}
       {
         currentUser ? (
-                        <div>
+                        <div className="session-buttons">
                           <p>{currentUser.first_name}</p>
                           <Link to="/">
                             <button onClick={logout}>Log out</button>
