@@ -19,6 +19,7 @@ const App = () => (
 
     <Route exact path="/" component={HomePageContainer} />
     <Route path="/parks/:parkId" component={ParkContainer} />
+    {/* <Route path="/trail/:trailId" component={}> */}
   </div>
 );
 
