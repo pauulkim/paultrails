@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NavBar = ({ currentUser, logout }) => {
 
   return (
-    <div className="nav-bar">
+    <nav className="nav-bar">
       <div className="invisible"></div>
       {/* main title with link that navigates to home page */}
       <div className="main-logo">
@@ -29,7 +29,7 @@ const NavBar = ({ currentUser, logout }) => {
                         </div>
                       )
       }
-    </div>
+    </nav>
   )
 
 }
