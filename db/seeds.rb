@@ -13,6 +13,10 @@ User.destroy_all # destroys all recs
 ApplicationRecord.connection.reset_pk_sequence!("users") # resets primary keys 
 
 demo = User.create(email: "demo@paultrails.com", first_name: "Demo", last_name: "User", password: "demopassword")
+u1 = User.create(email: "chef@warriors.com", first_name: "Stephen", last_name: "Curry", password: "chefcurry")
+u2 = User.create(email: "klay@warriors.com", first_name: "Klay", last_name: "Thompson", password: "splashbro")
+u3 = User.create(email: "dray@warriors.com", first_name: "Draymond", last_name: "Green", password: "dpoydpoy")
+u4 = User.create(email: "kerr@warriors.com", first_name: "Steve", last_name: "Kerr", password: "putmeincoach")
 
 
 
@@ -123,3 +127,23 @@ h3 = Trail.create(
   long: 126.59626519835005,
   park_id: 2
 )
+
+
+
+# reviews
+Review.destroy_all
+ApplicationRecord.connection.reset_pk_sequence!("reviews")
+
+r1 = Review.create(rating: 5, activity_date: "07/08/2020", review_description: "Great hike!! Would definitely recommend", user_id: 2, trail_id: 1)
+r2 = Review.create(rating: 5, activity_date: "01/12/2019", review_description: "Absolutely stunning", user_id: 3, trail_id: 1)
+r3 = Review.create(rating: 4, activity_date: "03/22/2021", review_description: "A little crowded, but worth it", user_id: 4, trail_id: 1)
+r4 = Review.create(rating: 2, activity_date: "08/01/2018", review_description: "Terrible hike - too long and too many people", user_id: 5, trail_id: 2)
+r5 = Review.create(rating: 3, activity_date: "10/30/2021", review_description: "Pretty average", user_id: 5, trail_id: 3)
+r6 = Review.create(rating: 5, activity_date: "11/04/2019", review_description: "Must do at least once in a lifetime", user_id: 4, trail_id: 1)
+r7 = Review.create(rating: 5, activity_date: "12/18/2020", review_description: "Life changing", user_id: 3, trail_id: 1)
+r8 = Review.create(rating: 4, activity_date: "09/29/2021", review_description: "Amazing hike, but a little long. Bring lots of water!", user_id: 2, trail_id: 1)
+r9 = Review.create(rating: 5, activity_date: "02/12/2018", review_description: "You won't regret it", user_id: 1, trail_id: 1)
+r10 = Review.create(rating: 1, activity_date: "04/09/2021", review_description: "Very dangerous. Stay away.", user_id: 1, trail_id: 2)
+r11 = Review.create(rating: 2, activity_date: "05/13/2019", review_description: "Fun hike, but was way too crowded", user_id: 3, trail_id: 2)
+r12 = Review.create(rating: 3, activity_date: "06/18/2021", review_description: "It was decent", user_id: 5, trail_id: 3)
+r13 = Review.create(rating: 4, activity_date: "01/01/2021", review_description: "Trail is easy to follow", user_id: 4, trail_id: 3)
