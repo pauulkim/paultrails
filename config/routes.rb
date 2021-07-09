@@ -9,9 +9,11 @@ Rails.application.routes.draw do
       resources :trails, only: [:index]
     end
 
-    resources :trails, only: [:show]
+    resources :trails, only: [:show] do 
+      resources :reviews, only: [:index]
+    end
 
-    resources :reviews, only: [:index, :show, :create, :update, :destroy]
+    resources :reviews, only: [:create, :update, :destroy]
   end
 
   root 'static_pages#root'
