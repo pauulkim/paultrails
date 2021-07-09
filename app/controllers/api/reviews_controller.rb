@@ -4,6 +4,10 @@ class Api::ReviewsController < ApplicationController
     render :index
   end
 
+  def create
+    @review = Review.where()
+  end
+
   private 
 
   def review_params
