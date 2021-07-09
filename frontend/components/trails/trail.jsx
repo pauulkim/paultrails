@@ -10,7 +10,7 @@ class Trail extends React.Component {
   };
   
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.trailId !== this.props.trailid) {
+    if (prevProps.trailId !== this.props.trailId) {
       this.props.requestTrail(this.props.trailId);
     };
   };
