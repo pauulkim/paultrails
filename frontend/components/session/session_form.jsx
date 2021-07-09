@@ -9,6 +9,10 @@ class SessionForm extends React.Component {
     this.demo = this.demo.bind(this);
   };
 
+  componentWillUnmount() {
+    this.props.clearErrors()
+  }
+
   demo(e) {
     e.preventDefault();
     const demoUser = { email: "demo@paultrails.com", password: "demopassword" };
