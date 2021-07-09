@@ -4,7 +4,7 @@ class User < ApplicationRecord
   validates :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true } # password can be nil b/c it doesn't exist within db
 
-  
+  has_many :reviews
   
   after_initialize :ensure_session_token # makes sure a user has a session token
   
