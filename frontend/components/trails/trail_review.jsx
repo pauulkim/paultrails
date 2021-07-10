@@ -10,10 +10,12 @@ class TrailReview extends React.Component {
 
     return (
       <div>
-        <p>{review.name}</p>
-        <p>{review.rating}</p>
+        <h3>{review.name}</h3>
+        <p>Rating: {review.rating}/5</p>
         <p>{review.activity_date}</p>
         <p>{review.review_description}</p>
+        <p>User Id: {review.user_id}</p>
+        <p>Trail Id: {review.trail_id}</p>
       </div>
     )
   }
