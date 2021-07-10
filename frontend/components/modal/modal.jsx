@@ -19,5 +19,3 @@ const Modal = ({ modal, closeModal }) => {
 };
 
 export default Modal;
-
-

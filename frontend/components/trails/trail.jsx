@@ -1,7 +1,7 @@
 import React from "react";
 import TrailReviewIndex from "./trail_review_index";
 import ReviewForm from "../reviews/review_form";
-import ModalContainer from "../modal/modal_container";
+// import ModalContainer from "../modal/modal_container";
 
 class Trail extends React.Component {
   constructor(props) {
