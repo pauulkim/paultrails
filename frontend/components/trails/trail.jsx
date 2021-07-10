@@ -1,6 +1,7 @@
 import React from "react";
 import TrailReviewIndex from "./trail_review_index";
 import ReviewForm from "../reviews/review_form";
+import ModalContainer from "../modal/modal_container";
 
 class Trail extends React.Component {
   constructor(props) {
@@ -49,6 +50,7 @@ class Trail extends React.Component {
 
     return (
       <div>
+        {/* <ModalContainer formState={formState} trailName={trail.name} actionType={makeReview}/> */}
         <section>
           <h2>{trail.name}</h2>
           <p>{trail.summary}</p>
