@@ -20,8 +20,9 @@ const updateReview = review => ({
   review
 });
 
-const destroyReview = () => ({
-  type: DELETE_REVIEW
+const destroyReview = reviewId => ({
+  type: DELETE_REVIEW,
+  reviewId
 });
 
 export const requestTrailReviews = trailId => dispatch => (
@@ -42,5 +43,7 @@ export const editReview = (review, reviewId) => dispatch => (
 
 export const removeReview = reviewId => dispatch => (
   ReviewAPIUtil.deleteReview(reviewId)
-    .then(() => dispatch(destroyReview()))
+    .then(review => dispatch(destroyReview(review.id)))
 );
+
+// add clear reviews?
