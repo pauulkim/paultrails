@@ -36,7 +36,14 @@ class Trail extends React.Component {
   };
 
   render() {
-    let { trailId, trail, loggedIn, currentUser, reviews, editReview, removeReview } = this.props;
+    let { trailId, trail, loggedIn, currentUser, reviews, makeReview, editReview, removeReview } = this.props;
+    let formState = {
+      rating: "",
+      activity_date: "",
+      review_description: "",
+      user_id: currentUser,
+      trail_id: trailId
+    };
     
     if (!trail) return null;
 
@@ -52,7 +59,7 @@ class Trail extends React.Component {
           <p>{trail.route_type}</p>
           <p>{`${trail.lat}, ${trail.long}`}</p>
           <button onClick={loggedIn ? this.onLoggedInClick : this.onLoggedOffClick}>Write review</button>
-          {this.state.displayReviewForm ? <ReviewForm /> : null}
+          {this.state.displayReviewForm ? <ReviewForm formState={formState} trailName={trail.name} actionType={makeReview} /> : null}
         </section>
         <section>
           <TrailReviewIndex trailId={trailId} loggedIn={loggedIn} currentUser={currentUser} reviews={reviews} editReview={editReview} removeReview={removeReview} />
