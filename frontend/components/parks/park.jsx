@@ -1,5 +1,5 @@
 import React from "react";
-import { ParkTrailItems } from "./park_trail_items";
+import { ParkTrailIndex } from "./park_trail_index";
 
 class Park extends React.Component {
   constructor(props) {
@@ -35,7 +35,7 @@ class Park extends React.Component {
           <p>{park.contact}</p>
         </section>
         <section>
-            <ParkTrailItems trails={trails} parkName={park.name}/>
+            <ParkTrailIndex trails={trails} parkName={park.name}/>
         </section>
       </div>
     )

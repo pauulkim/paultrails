@@ -1,5 +1,6 @@
 import React from "react";
-import TrailReviews from "./trail_reviews";
+import TrailReviewIndex from "./trail_review_index";
+import ReviewForm from "../reviews/review_form";
 
 class Trail extends React.Component {
   constructor(props) {
@@ -51,10 +52,10 @@ class Trail extends React.Component {
           <p>{trail.route_type}</p>
           <p>{`${trail.lat}, ${trail.long}`}</p>
           <button onClick={loggedIn ? this.onLoggedInClick : this.onLoggedOffClick}>Write review</button>
-          {this.state.displayReviewForm ? <p>hello</p> : null}
+          {this.state.displayReviewForm ? <ReviewForm /> : null}
         </section>
         <section>
-          <TrailReviews trailId={trailId} loggedIn={loggedIn} currentUser={currentUser} reviews={reviews} editReview={editReview} removeReview={removeReview} />
+          <TrailReviewIndex trailId={trailId} loggedIn={loggedIn} currentUser={currentUser} reviews={reviews} editReview={editReview} removeReview={removeReview} />
         </section>
       </div>
     )

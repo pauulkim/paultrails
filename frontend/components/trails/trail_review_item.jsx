@@ -1,6 +1,6 @@
 import React from "react";
 
-class TrailReview extends React.Component {
+class TrailReviewItem extends React.Component {
   constructor(props) {
     super(props)
   };
@@ -21,4 +21,4 @@ class TrailReview extends React.Component {
   }
 };
 
-export default TrailReview;
+export default TrailReviewItem;
