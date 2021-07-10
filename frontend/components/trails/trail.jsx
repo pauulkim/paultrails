@@ -4,6 +4,12 @@ import TrailReviews from "./trail_reviews";
 class Trail extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      displayReviewForm: false
+    };
+
+    this.onLoggedInClick = this.onLoggedInClick.bind(this);
+    this.onLoggedOffClick = this.onLoggedOffClick.bind(this);
   };
 
   componentDidMount() {
@@ -16,6 +22,16 @@ class Trail extends React.Component {
       this.props.requestTrail(this.props.trailId);
       this.props.requestTrailReviews(this.props.trailId);
     };
+  };
+
+  onLoggedInClick() {
+    this.setState({
+      displayReviewForm: !this.state.displayReviewForm
+    })
+  };
+  
+  onLoggedOffClick() {
+    this.props.history.push("/login")
   };
 
   render() {
@@ -34,6 +50,8 @@ class Trail extends React.Component {
           <p>{trail.elevation_gain}</p>
           <p>{trail.route_type}</p>
           <p>{`${trail.lat}, ${trail.long}`}</p>
+          <button onClick={loggedIn ? this.onLoggedInClick : this.onLoggedOffClick}>Write review</button>
+          {this.state.displayReviewForm ? <p>hello</p> : null}
         </section>
         <section>
           <TrailReviews trailId={trailId} loggedIn={loggedIn} currentUser={currentUser} reviews={reviews} editReview={editReview} removeReview={removeReview} />
@@ -42,6 +60,5 @@ class Trail extends React.Component {
     )
   };
 };
-
 
 export default Trail;
