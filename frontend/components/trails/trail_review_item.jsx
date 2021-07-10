@@ -6,7 +6,7 @@ class TrailReviewItem extends React.Component {
   };
 
   render() {
-    let { review } = this.props;
+    let { review, currentUser } = this.props;
 
     return (
       <div>
@@ -16,6 +16,15 @@ class TrailReviewItem extends React.Component {
         <p>{review.review_description}</p>
         <p>User Id: {review.user_id}</p>
         <p>Trail Id: {review.trail_id}</p>
+        {
+          (review.user_id === currentUser) ?
+          (
+            <div>
+              <button>Edit</button>
+              <button>Delete</button>
+            </div>
+          ) : null
+        }
       </div>
     )
   }
