@@ -4,13 +4,7 @@ import ReviewForm from "../reviews/review_form";
 
 class Trail extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = {
-      displayReviewForm: false
-    };
-
-    this.onLoggedInClick = this.onLoggedInClick.bind(this);
-    this.onLoggedOffClick = this.onLoggedOffClick.bind(this);
+    super(props)
   };
 
   componentDidMount() {
@@ -25,16 +19,6 @@ class Trail extends React.Component {
     };
   };
 
-  onLoggedInClick() {
-    this.setState({
-      displayReviewForm: !this.state.displayReviewForm
-    })
-  };
-  
-  onLoggedOffClick() {
-    this.props.history.push("/login")
-  };
-
   render() {
     let { trailId, trail, loggedIn, currentUser, reviews, makeReview, editReview, removeReview } = this.props;
     let formState = {
@@ -42,7 +26,8 @@ class Trail extends React.Component {
       activity_date: "",
       review_description: "",
       user_id: currentUser,
-      trail_id: trailId
+      trail_id: trailId,
+      displayReviewForm: false
     };
     
     if (!trail) return null;
@@ -58,8 +43,7 @@ class Trail extends React.Component {
           <p>{trail.elevation_gain}</p>
           <p>{trail.route_type}</p>
           <p>{`${trail.lat}, ${trail.long}`}</p>
-          <button onClick={loggedIn ? this.onLoggedInClick : this.onLoggedOffClick}>Write review</button>
-          {this.state.displayReviewForm ? <ReviewForm formState={formState} trailName={trail.name} actionType={makeReview} /> : null}
+          <ReviewForm formState={formState} trailName={trail.name} actionType={makeReview} loggedIn={loggedIn} history={this.props.history}/>
         </section>
         <section>
           <TrailReviewIndex trailId={trailId} loggedIn={loggedIn} currentUser={currentUser} reviews={reviews} editReview={editReview} removeReview={removeReview} />
