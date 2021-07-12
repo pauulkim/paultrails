@@ -14,10 +14,10 @@ const NavBar = ({ currentUser, logout }) => {
       {/* displays different elements depending on if a user is logged in or not */}
       {
         currentUser ? (
-                        <div className="session-buttons">
+                        <div className="user-dropdown">
                           <p>{currentUser.first_name}</p>
                           <Link to="/">
-                            <button onClick={logout}>Log out</button>
+                            <div className="user-dropdown-content" onClick={logout}>Log out</div>
                           </Link>
                         </div>
                       ) 

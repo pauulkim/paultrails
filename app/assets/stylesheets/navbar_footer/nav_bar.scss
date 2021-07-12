@@ -28,3 +28,21 @@
   align-items: center;
   justify-content: flex-end;
 }
+
+.user-dropdown {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+}
+
+.user-dropdown:hover .user-dropdown-content {
+  display: block
+}
