@@ -36,7 +36,6 @@ class ReviewForm extends React.Component {
       displayReviewForm: !this.state.displayReviewForm
     });
     if (this.props.update) {
-      debugger
       this.props.actionType(this.state, this.props.reviewId);
     } else {
       this.props.actionType(this.state);

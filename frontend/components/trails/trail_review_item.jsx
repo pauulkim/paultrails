@@ -3,7 +3,13 @@ import ReviewForm from "../reviews/review_form";
 
 class TrailReviewItem extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+
+    this.deleteReview = this.deleteReview.bind(this);
+  };
+
+  deleteReview() {
+    this.props.removeReview(this.props.review.id)
   };
 
   render() {
@@ -30,7 +36,7 @@ class TrailReviewItem extends React.Component {
           (
             <div>
               <ReviewForm formState={formState} trailName={trailName} loggedIn={loggedIn} actionType={editReview} reviewId={review.id} update={true} buttonText={buttonText}/>
-              <button>Delete</button>
+              <button onClick={this.deleteReview}>Delete</button>
             </div>
           ) : null
         }
