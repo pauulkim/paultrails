@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewForm from "../reviews/review_form";
 
 class TrailReviewItem extends React.Component {
   constructor(props) {
@@ -6,7 +7,15 @@ class TrailReviewItem extends React.Component {
   };
 
   render() {
-    let { review, currentUser } = this.props;
+    let { trailName, review, currentUser, editReview, loggedIn, buttonText } = this.props;
+    let formState = {
+      rating: review.rating,
+      activity_date: review.activity_date,
+      review_description: review.review_description,
+      user_id: review.user_id,
+      trail_id: review.trail_id,
+      displayReviewForm: false
+    };
 
     return (
       <div>
@@ -20,7 +29,7 @@ class TrailReviewItem extends React.Component {
           (review.user_id === currentUser) ?
           (
             <div>
-              <button>Edit</button>
+              <ReviewForm formState={formState} trailName={trailName} loggedIn={loggedIn} actionType={editReview} reviewId={review.id} update={true} buttonText={buttonText}/>
               <button>Delete</button>
             </div>
           ) : null

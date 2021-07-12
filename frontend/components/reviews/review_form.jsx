@@ -34,8 +34,13 @@ class ReviewForm extends React.Component {
     e.preventDefault();
     this.setState({
       displayReviewForm: !this.state.displayReviewForm
-    })
-    this.props.actionType(this.state);
+    });
+    if (this.props.update) {
+      debugger
+      this.props.actionType(this.state, this.props.reviewId);
+    } else {
+      this.props.actionType(this.state);
+    };
   }
 
   render() {
@@ -44,7 +49,7 @@ class ReviewForm extends React.Component {
 
     return (
       <div>
-        <button onClick={loggedIn ? this.onLoggedInClick : this.onLoggedOffClick}>Write review</button>
+        <button onClick={loggedIn ? this.onLoggedInClick : this.onLoggedOffClick}>{this.props.buttonText}</button>
         {
           (!this.state.displayReviewForm) ? null :
           (

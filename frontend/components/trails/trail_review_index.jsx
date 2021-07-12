@@ -1,11 +1,11 @@
 import React from "react";
 import TrailReviewItem from "./trail_review_item";
 
-const TrailReviewIndex = ({ trailId, loggedIn, currentUser, reviews, editReview, removeReview }) => (
+const TrailReviewIndex = ({ trailName, loggedIn, currentUser, reviews, editReview, removeReview, buttonText }) => (
   <ul>
     {
       reviews.map( review => (
-        <TrailReviewItem key={review.id} trailId={trailId} loggedIn={loggedIn} currentUser={currentUser} review={review} editReview={editReview} removeReview={removeReview} />
+        <TrailReviewItem key={review.id} trailName={trailName} loggedIn={loggedIn} currentUser={currentUser} review={review} editReview={editReview} removeReview={removeReview} buttonText={buttonText}/>
       ))
     }
   </ul>

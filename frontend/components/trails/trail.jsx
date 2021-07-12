@@ -43,10 +43,10 @@ class Trail extends React.Component {
           <p>{trail.elevation_gain}</p>
           <p>{trail.route_type}</p>
           <p>{`${trail.lat}, ${trail.long}`}</p>
-          <ReviewForm formState={formState} trailName={trail.name} actionType={makeReview} loggedIn={loggedIn} history={this.props.history}/>
+          <ReviewForm formState={formState} trailName={trail.name} actionType={makeReview} loggedIn={loggedIn} history={this.props.history} buttonText={"Write review"}/>
         </section>
         <section>
-          <TrailReviewIndex trailId={trailId} loggedIn={loggedIn} currentUser={currentUser} reviews={reviews} editReview={editReview} removeReview={removeReview} />
+          <TrailReviewIndex trailName={trail.name} loggedIn={loggedIn} currentUser={currentUser} reviews={reviews} editReview={editReview} removeReview={removeReview} buttonText={"Edit"} />
         </section>
       </div>
     )
