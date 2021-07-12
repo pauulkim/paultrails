@@ -1,0 +1,26 @@
+.session-page-wrapper {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.session-page-image {
+  width: 100%;
+  height: 925px;
+}
+
+.session-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // font-size: 64px;
+  // font-family: Metropolis-Regular;
+  background: #909090;
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  padding: 24px;
+  border-radius: 16px;
+}
+

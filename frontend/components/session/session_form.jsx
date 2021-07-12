@@ -40,60 +40,63 @@ class SessionForm extends React.Component {
     const { errors, formType, formTitle, otherText, otherForm } = this.props;
 
     return (
-      <div>
-        <h2>{formTitle}</h2>
-        <form onSubmit={this.handleSubmit}>
-            {/* only display first name and last name fields on sign up */}
-            {
-              formType === "Sign Up" ? (
-                <>
-                  <label>
-                    <input 
-                      type="text"
-                      placeholder="First name"
-                      value={this.state.first_name}
-                      onChange={this.update("first_name")}
-                      required
-                    />
-                  </label>
-                  <label>
-                    <input 
-                      type="text"
-                      placeholder="Last name"
-                      value={this.state.last_name}
-                      onChange={this.update("last_name")}
-                      required
-                    />
-                  </label>
-                </>
-              ) : ("")
-            }
+      <div className="session-page-wrapper">
+        <img className="session-page-image" src={sessionPage} alt="Session Image"></img>
+        <div className="session-page">
+          <h2>{formTitle}</h2>
+          <form onSubmit={this.handleSubmit}>
+              {/* only display first name and last name fields on sign up */}
+              {
+                formType === "Sign Up" ? (
+                  <>
+                    <label>
+                      <input 
+                        type="text"
+                        placeholder="First name"
+                        value={this.state.first_name}
+                        onChange={this.update("first_name")}
+                        required
+                      />
+                    </label>
+                    <label>
+                      <input 
+                        type="text"
+                        placeholder="Last name"
+                        value={this.state.last_name}
+                        onChange={this.update("last_name")}
+                        required
+                      />
+                    </label>
+                  </>
+                ) : ("")
+              }
 
-            <label>
-              <input 
-                type="email"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={this.update("email")}
-                required
-              />
-            </label>
-            <label>
-              <input 
-                type="password"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.update("password")}
-                required
-              />
-            </label>
+              <label>
+                <input 
+                  type="email"
+                  placeholder="Email"
+                  value={this.state.email}
+                  onChange={this.update("email")}
+                  required
+                />
+              </label>
+              <label>
+                <input 
+                  type="password"
+                  placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.update("password")}
+                  required
+                />
+              </label>
 
-            <button>{formType}</button>
-        </form>
-        <p>{errors}</p>
-        <p>{otherText}</p>
-        <p>{otherForm}</p>
-        <p><button onClick={this.demo}>Demo User</button></p>
+              <button>{formType}</button>
+          </form>
+          <p>{errors}</p>
+          <p>{otherText}</p>
+          <p>{otherForm}</p>
+          <p><button onClick={this.demo}>Demo User</button></p>
+        </div>
       </div>
     )
   }
