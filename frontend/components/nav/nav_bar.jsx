@@ -15,12 +15,10 @@ const NavBar = ({ currentUser, logout }) => {
       {
         currentUser ? (
                         <div className="session-buttons">
-                          <div className="user-dropdown">
+                          <div>
                             <p>{currentUser.first_name}</p>
                           </div>
-                          <Link to="/">
-                            <div className="user-dropdown-content" onClick={logout}>Log out</div>
-                          </Link>
+                          <Link to="/" className="user-dropdown-content" onClick={logout}>Log out</Link>
                         </div>
                       ) 
                     :   

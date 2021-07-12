@@ -1,6 +1,5 @@
 .nav-bar {
   display: flex;
-  
   font-family: Proxima Nova, Arial, sans-serif;
   background-color: #fff;
   height: 60px;
@@ -27,5 +26,24 @@
   flex: 1;
   align-items: center;
   justify-content: flex-end;
+  border: 1px solid red
 }
 
+.user-dropdown {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  position: relative;
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  border: 1px solid blue;
+  background: yellow
+}
+
+.session-buttons:hover .user-dropdown-content {
+  display: block
+}
