@@ -1,6 +1,11 @@
+@font-face {
+  font-family: Metropolis-Regular;
+  src: url("fonts/Metropolis-Regular.ttf") format("opentype");
+}
+
 .nav-bar {
   display: flex;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Metropolis-Regular;
   background-color: #fff;
   height: 60px;
   margin: 0;
@@ -26,24 +31,64 @@
   flex: 1;
   align-items: center;
   justify-content: flex-end;
-  border: 1px solid red
 }
 
 .user-dropdown {
   display: flex;
   flex: 1;
-  align-items: flex-end;
-  position: relative;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .user-dropdown-content {
-  display: none;
+  visibility: hidden;
   position: absolute;
-  top: 50px;
-  border: 1px solid blue;
-  background: yellow
 }
 
-.session-buttons:hover .user-dropdown-content {
-  display: block
+.user-drop:hover .user-dropdown-content {
+  cursor: pointer;
+  visibility: visible;
+  
+  a {
+    text-decoration: none;
+    font-size: 12px;
+    border: 1px solid #909090;
+    border-radius: 4px;
+    color: #909090;
+  }
+}
+
+.main-logo * {
+  text-decoration: none;
+  font-size: 20px;
+  color: #909090;
+  font-weight: bold;
+}
+
+.session-buttons * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 10px 13px;
+  border: 2px solid #219ad8;
+}
+
+.sign-up {
+  background: #219ad8;
+  color: #fff;
+  margin-right: 8px;
+}
+
+.log-in {
+  background: #fff;
+  color: #219ad8;
+}
+
+.logo {
+  color: #428a13;
+  font-size: larger;
 }

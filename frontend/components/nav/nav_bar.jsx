@@ -8,24 +8,29 @@ const NavBar = ({ currentUser, logout }) => {
       <div className="invisible"></div>
       {/* main title with link that navigates to home page */}
       <div className="main-logo">
-        <Link to="/">PaulTrails</Link>
+        <Link to="/">
+          <i className="fas fa-mountain logo"></i>
+          PaulTrails
+        </Link>
       </div>
 
       {/* displays different elements depending on if a user is logged in or not */}
       {
         currentUser ? (
-                        <div className="session-buttons">
-                          <div>
-                            <p>{currentUser.first_name}</p>
+                        <div className="user-dropdown">
+                          <div className="user-drop">
+                            {currentUser.first_name}
+                          <div className="user-dropdown-content" >
+                            <Link to="/" onClick={logout}>Log out</Link>
                           </div>
-                          <Link to="/" className="user-dropdown-content" onClick={logout}>Log out</Link>
+                          </div>
                         </div>
                       ) 
                     :   
                       (
                         <div className="session-buttons">
-                          <Link to="/signup" className="sign-up">Sign up</Link>
-                          <Link to="/login" className="log-in">Log in</Link>
+                          <Link className="sign-up" to="/signup">Sign up</Link>
+                          <Link className="log-in" to="/login">Log in</Link>
                         </div>
                       )
       }
