@@ -52,33 +52,36 @@ class ReviewForm extends React.Component {
         {
           (!this.state.displayReviewForm) ? null :
           (
-            <form onSubmit={this.handleSubmit}>
-              <h2>{trailName}</h2>
-              <label>
-                <input 
-                  type="text"
-                  placeholder="Rating"
-                  value={this.state.rating}
-                  onChange={this.update("rating")}
+            <div className="review-form-container">
+              <form className="review-form" onSubmit={this.handleSubmit}>
+                <div onClick={this.onLoggedInClick}>x</div>
+                <h2>{trailName}</h2>
+                <label>
+                  <input 
+                    type="text"
+                    placeholder="Rating"
+                    value={this.state.rating}
+                    onChange={this.update("rating")}
+                    required
+                  />
+                </label>
+                <label>
+                  <input 
+                    type="date"
+                    value={this.state.activity_date}
+                    onChange={this.update("activity_date")}
+                    required
+                  />
+                </label>
+                <textarea 
+                  placeholder="Give back to the community. Share your thoughts about the trail!"
+                  value={this.state.review_description}
+                  onChange={this.update("review_description")}
                   required
                 />
-              </label>
-              <label>
-                <input 
-                  type="date"
-                  value={this.state.activity_date}
-                  onChange={this.update("activity_date")}
-                  required
-                />
-              </label>
-              <textarea 
-                placeholder="Give back to the community. Share your thoughts about the trail!"
-                value={this.state.review_description}
-                onChange={this.update("review_description")}
-                required
-              />
-              <button>Post</button>
-            </form>
+                <button>Post</button>
+              </form>
+            </div>
           )
         }
       </div>
