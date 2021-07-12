@@ -8,5 +8,5 @@ class Trail < ApplicationRecord
 
   belongs_to :park
 
-  has_one_attached :trail_photo
+  has_many_attached :trail_photos
 end
