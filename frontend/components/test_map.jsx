@@ -12,11 +12,15 @@ class TestMap extends React.Component {
 
     // wrap this.mapNode in a Google Map
     this.map = new google.maps.Map(this.mapNode, mapOptions);
+    console.log(this.mapNode)
   }
 
   render() {
     return (
+      <>
       <div className="test-map" ref={ map => this.mapNode = map }></div>
+      {console.log(this.mapNode)}
+      </>
     )
   }
 }
