@@ -14,7 +14,7 @@ const mSTP = (state, ownProps) => ({
     email: "",
     password: ""
   },
-  otherText: "Already have an account?",
+  otherText: "Already have an account? ",
   otherForm: <Link to="/login">Log in</Link>
 });
 

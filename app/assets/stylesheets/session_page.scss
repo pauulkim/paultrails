@@ -1,12 +1,11 @@
 .session-page-wrapper {
   position: relative;
-  text-align: center;
-  color: white;
+  color: black;
 }
 
 .session-page-image {
   width: 100%;
-  height: 925px;
+  height: 800px;
 }
 
 .session-page {
@@ -14,13 +13,67 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  // font-size: 64px;
-  // font-family: Metropolis-Regular;
-  background: #909090;
+  background: white;
   display: flex;
   flex-direction: column;
   max-width: 480px;
   padding: 24px;
   border-radius: 16px;
+  font-family: Metropolis-Regular;
+  width: 480px;
 }
 
+.session-form * {
+  padding: 10px;
+}
+
+.session-form button {
+  margin: 10px;
+}
+
+.session-form-header {
+  font-size: 24px;
+  font-weight: bold;
+  // padding: 10px;
+}
+
+.session-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.session-form label {
+  width: 100%;
+}
+
+.session-form label * {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Metropolis-Regular;
+}
+
+.session-form button {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Metropolis-Regular;
+  background: #428a13;
+}
+
+.other-form {
+  font-size: 16px;
+  font-family: Metropolis-Regular; 
+  display: flex;
+}
+
+.other-form-link a {
+  text-decoration: none;
+  color: #428a13;
+  font-weight: bold;
+}

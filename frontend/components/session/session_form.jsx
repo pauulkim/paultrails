@@ -43,8 +43,8 @@ class SessionForm extends React.Component {
       <div className="session-page-wrapper">
         <img className="session-page-image" src={sessionPage} alt="Session Image"></img>
         <div className="session-page">
-          <h2>{formTitle}</h2>
-          <form onSubmit={this.handleSubmit}>
+          <form className="session-form" onSubmit={this.handleSubmit}>
+            <h2 className="session-form-header">{formTitle}</h2>
               {/* only display first name and last name fields on sign up */}
               {
                 formType === "Sign Up" ? (
@@ -91,11 +91,14 @@ class SessionForm extends React.Component {
               </label>
 
               <button>{formType}</button>
+              <button onClick={this.demo}>Demo User</button>
+              <p>{errors}</p>
+              <div className="other-form">
+                <p>{otherText}</p>
+                <p className="other-form-link">{otherForm}</p>
+              </div>
+
           </form>
-          <p>{errors}</p>
-          <p>{otherText}</p>
-          <p>{otherForm}</p>
-          <p><button onClick={this.demo}>Demo User</button></p>
         </div>
       </div>
     )
