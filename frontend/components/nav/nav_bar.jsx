@@ -21,8 +21,8 @@ const NavBar = ({ currentUser, logout }) => {
                           <div className="user-dropdown">
                             <div className="user-drop">
                               {currentUser.first_name}
+                              <Link className="user-dropdown-content" to="/" onClick={logout}>Log out</Link>
                             </div>
-                            <Link className="user-dropdown-content" to="/" onClick={logout}>Log out</Link>
                           </div>
                         </>
                       ) 
@@ -40,12 +40,3 @@ const NavBar = ({ currentUser, logout }) => {
 }
 
 export default NavBar;
-//old code
-{/* <div className="user-dropdown">
-                          <div className="user-drop">
-                            {currentUser.first_name}
-                          <div className="user-dropdown-content" >
-                            <Link to="/" onClick={logout}>Log out</Link>
-                          </div>
-                          </div>
-                        </div> */}
