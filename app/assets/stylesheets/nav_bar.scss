@@ -46,16 +46,13 @@
 }
 
 .user-drop:hover .user-dropdown-content {
-  cursor: pointer;
   visibility: visible;
-  
-  a {
-    text-decoration: none;
-    font-size: 12px;
-    border: 1px solid #909090;
-    border-radius: 4px;
-    color: #909090;
-  }
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 12px;
+  border: 1px solid #909090;
+  border-radius: 4px;
+  color: #909090;
 }
 
 .main-logo * {
