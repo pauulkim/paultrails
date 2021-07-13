@@ -9,6 +9,9 @@ import HomePageContainer from './home_page/home_page_container';
 import ParkContainer from './parks/park_container';
 import TrailContainer from './trails/trail_container';
 
+// testing
+import TestMap from "./test_map";
+
 const App = () => (
   <div>
     <header>
@@ -21,6 +24,9 @@ const App = () => (
     <Route exact path="/" component={HomePageContainer} />
     <Route path="/parks/:parkId" component={ParkContainer} />
     <Route path="/trail/:trailId" component={TrailContainer} />
+
+    {/* testing */}
+    <Route path="/testmap" component={TestMap}></Route>
   </div>
 );
 
