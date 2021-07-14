@@ -56,8 +56,9 @@ class Park extends React.Component {
             </div>
           </div>
         </div>
-        <div>
-            <ParkTrailIndex trails={trails} parkName={park.name}/>
+        <div className="park-trails-container">
+          <h2>Trails</h2>
+          <ParkTrailIndex trails={trails} parkName={park.name}/>
         </div>
       </div>
     )

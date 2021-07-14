@@ -10,7 +10,7 @@
   max-width: 1000px;
 }
 
-.park-container img {
+.park-container > img {
   height: 250px;
   border-radius: 8px;
   padding-bottom: 24px;
@@ -67,14 +67,14 @@
   flex: 1;
 }
 
-.acreage h2 {
+.acreage > h2 {
   font-size: 16px;
   font-weight: 700;
   color: #414141;
   padding-bottom: 7px;
 }
 
-.acreage p {
+.acreage > p {
   font-size: 16px;
   color: #5a5a5a;
 }
@@ -85,14 +85,39 @@
   flex: 1;
 }
 
-.contact h2 {
+.contact > h2 {
   font-size: 16px;
   font-weight: 700;
   color: #414141;
   padding-bottom: 7px;
 }
 
-.contact p {
+.contact > p {
   font-size: 16px;
   color: #5a5a5a;
+}
+
+.park-trails-container {
+  padding-top: 32px;
+}
+
+.park-trails-container > h2 {
+  margin-bottom: 18px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #414141
+}
+
+.park-trails-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.park-trail-item {
+  display: flex;
+}
+
+.park-trail-item > img {
+  height: 250px;
+  border-radius: 8px;
 }
