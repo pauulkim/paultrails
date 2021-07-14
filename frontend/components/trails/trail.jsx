@@ -33,8 +33,9 @@ class Trail extends React.Component {
     if (!trail) return null;
 
     return (
-      <div>
-        <section>
+      <div className="trail-container">
+        <img src="https://paultrails-seeds.s3.us-west-1.amazonaws.com/home_page.jpg" alt="trail.jpg"/>
+        <div>
           <h2>{trail.name}</h2>
           <p>{trail.summary}</p>
           <p>{trail.description}</p>
@@ -44,10 +45,10 @@ class Trail extends React.Component {
           <p>{trail.route_type}</p>
           <p>{`${trail.lat}, ${trail.long}`}</p>
           <ReviewForm formState={formState} trailName={trail.name} actionType={makeReview} loggedIn={loggedIn} history={this.props.history} buttonText={"Write review"}/>
-        </section>
-        <section>
+        </div>
+        <div>
           <TrailReviewIndex trailName={trail.name} loggedIn={loggedIn} currentUser={currentUser} reviews={reviews} editReview={editReview} removeReview={removeReview} buttonText={"Edit"} />
-        </section>
+        </div>
       </div>
     )
   };
