@@ -36,7 +36,7 @@ class Park extends React.Component {
             count={5} 
             value={4}
             color="lightgray"
-            size={20}
+            size={18}
             edit={false}
           /> 
           <p className="park-description">{park.description}</p>

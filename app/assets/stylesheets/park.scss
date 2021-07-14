@@ -146,3 +146,46 @@
   font-weight: 400;
   padding-bottom: 6px;
 }
+
+.park-trail-stars-diff {
+  display: flex;
+  align-items: center;
+}
+
+.difficulty-buttons {
+  color: white;
+  width: 72px;
+  height: 18px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.hard {
+  background: #676767;
+}
+
+.moderate {
+  background: #4bafe1;
+}
+
+.easy {
+  background: #69a041;
+}
+
+.park-trail-length {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676
+}
+
+.park-trail-summary {
+  margin-top: 24px;
+  font-size: 16px;
+  color: #5a5a5a;
+}
