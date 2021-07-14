@@ -26,13 +26,14 @@
   font-weight: 700;
   color: #414141;
   width: 80%;
-  padding-bottom: 12px;
+  padding-bottom: 8px;
 }
 
 .park-description {
   font-size: 18px;
   color: #5a5a5a;
   width: 80%;
+  padding-top: 12px;
   padding-bottom: 24px;
 }
 
@@ -42,7 +43,56 @@
   border-radius: 8px;
 }
 
+.park-minor-info {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #909090;
+}
+
+.park-minor-info > h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #414141;
+  padding-bottom: 16px;
+}
+
 .park-minor-details {
   display: flex;
+  width: 80%;
+}
+
+.acreage {
+  display: flex;
   flex-direction: column;
+  flex: 1;
+}
+
+.acreage h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #414141;
+  padding-bottom: 7px;
+}
+
+.acreage p {
+  font-size: 16px;
+  color: #5a5a5a;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.contact h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #414141;
+  padding-bottom: 7px;
+}
+
+.contact p {
+  font-size: 16px;
+  color: #5a5a5a;
 }
