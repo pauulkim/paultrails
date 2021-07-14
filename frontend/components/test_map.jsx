@@ -1,6 +1,9 @@
 import React from "react";
 
 class TestMap extends React.Component {
+  constructor(props) {
+    super(props);
+  };
   //...
 
   componentDidMount() {

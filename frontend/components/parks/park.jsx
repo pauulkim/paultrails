@@ -1,4 +1,5 @@
 import React from "react";
+import Map from "../maps/map";
 import { ParkTrailIndex } from "./park_trail_index";
 
 class Park extends React.Component {
@@ -30,7 +31,8 @@ class Park extends React.Component {
         <section>
           <h1>{park.name}</h1>
           <p>{park.description}</p>
-          <p>{`(${park.lat}, ${park.long})`}</p>
+          <Map lat={park.lat} long={park.long} type="park-map"/>
+          {/* <p>{`(${park.lat}, ${park.long})`}</p> */}
           <p>{park.acreage}</p>
           <p>{park.contact}</p>
         </section>

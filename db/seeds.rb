@@ -8,6 +8,8 @@
 
 
 
+require "open-uri"
+
 # users
 User.destroy_all # destroys all recs
 ApplicationRecord.connection.reset_pk_sequence!("users") # resets primary keys 
@@ -147,3 +149,12 @@ r10 = Review.create(rating: 1, activity_date: DateTime.new(2021, 4, 9), review_d
 r11 = Review.create(rating: 2, activity_date: DateTime.new(2019, 5, 13), review_description: "Fun hike, but was way too crowded", user_id: 3, trail_id: 5)
 r12 = Review.create(rating: 3, activity_date: DateTime.new(2021, 6, 18), review_description: "It was decent", user_id: 5, trail_id: 6)
 r13 = Review.create(rating: 4, activity_date: DateTime.new(2021, 1, 1), review_description: "Trail is easy to follow", user_id: 4, trail_id: 6)
+
+
+
+# photos
+# home_page = open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/home_page.jpg")
+# test2 = open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/dante-labella-T3rJ98XVrRo-unsplash.jpg")
+
+# z1.trail_photos.attach(io: home_page, filename: "test1.jpg")
+# z1.trail_photos.attach(io: test2, filename: "test2.jpg")
