@@ -41,7 +41,7 @@ class SessionForm extends React.Component {
 
     return (
       <div className="session-page-wrapper">
-        <img className="session-page-image" src={sessionPage} alt="Session Image"></img>
+        <img className="session-page-image" src={"https://paultrails-seeds.s3.us-west-1.amazonaws.com/session_form_img.jpg"} alt="Session Image"></img>
         <div className="session-page">
           <form className="session-form" onSubmit={this.handleSubmit}>
             <h2 className="session-form-header">{formTitle}</h2>
