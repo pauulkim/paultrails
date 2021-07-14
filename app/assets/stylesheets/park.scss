@@ -1,4 +1,48 @@
+.park-container {
+  display: flex;
+  flex-direction: column;
+  font-family: Metropolis-Regular;
+  align-items: center;
+}
+
+.park-container > * {
+  width: 1000px;
+  max-width: 1000px;
+}
+
+.park-container img {
+  height: 250px;
+  border-radius: 8px;
+  padding-bottom: 24px;
+}
+
+.park-info {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #909090;
+}
+
+.park-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #414141;
+  width: 80%;
+  padding-bottom: 12px;
+}
+
+.park-description {
+  font-size: 18px;
+  color: #5a5a5a;
+  width: 80%;
+  padding-bottom: 24px;
+}
+
 .park-map {
-  width: 500px;
-  height: 500px;
+  width: 80%;
+  height: 250px;
+  border-radius: 8px;
+}
+
+.park-minor-details {
+  display: flex;
+  flex-direction: column;
 }

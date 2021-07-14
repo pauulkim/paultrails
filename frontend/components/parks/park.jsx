@@ -27,18 +27,22 @@ class Park extends React.Component {
     if (!trails) return null;
     
     return (
-      <div>
-        <section>
-          <h1>{park.name}</h1>
-          <p>{park.description}</p>
+      <div className="park-container">
+        <img src="https://paultrails-seeds.s3.us-west-1.amazonaws.com/session_form_img.jpg"/>
+        <div className="park-info">
+          <h1 className="park-title">{park.name}</h1>
+          <p className="park-description">{park.description}</p>
           <Map lat={park.lat} long={park.long} type="park-map"/>
-          {/* <p>{`(${park.lat}, ${park.long})`}</p> */}
-          <p>{park.acreage}</p>
-          <p>{park.contact}</p>
-        </section>
-        <section>
+        </div>
+        <div>
+          <div className="park-minor-details">
+            <p>{park.acreage}</p>
+            <p>{park.contact}</p>
+          </div>
+        </div>
+        <div>
             <ParkTrailIndex trails={trails} parkName={park.name}/>
-        </section>
+        </div>
       </div>
     )
   };
