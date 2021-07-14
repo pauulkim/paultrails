@@ -33,7 +33,6 @@ class Park extends React.Component {
         <div className="park-info">
           <h1 className="park-title">{park.name}</h1>
           <ReactStars 
-            className="stars" 
             count={5} 
             value={4}
             color="lightgray"

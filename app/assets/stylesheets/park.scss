@@ -115,9 +115,34 @@
 
 .park-trail-item {
   display: flex;
+  margin-bottom: 24px;
+  height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 #5a5a5a;
+  padding: 16px;
+  text-decoration: none;
 }
 
 .park-trail-item > img {
-  height: 250px;
+  height: 100%;
+  width: 280px;
   border-radius: 8px;
+}
+
+.park-trail-item-info {
+  padding-top: 15px;
+  padding-left: 24px;
+  color: #414141
+}
+
+.park-trail-item-info > h2 {
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+
+.park-trail-item-info > h4 {
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 6px;
 }
