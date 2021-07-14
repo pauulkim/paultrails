@@ -35,6 +35,7 @@
   width: 80%;
   padding-top: 12px;
   padding-bottom: 24px;
+  line-height: 1.44;
 }
 
 .park-map {
@@ -188,4 +189,7 @@
   margin-top: 24px;
   font-size: 16px;
   color: #5a5a5a;
+  height: 100%;
+  line-height: 1.5;
+  overflow: hidden;
 }
