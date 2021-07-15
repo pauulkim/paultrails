@@ -58,7 +58,7 @@ class Trail extends React.Component {
         </div>
         <div className="trail-top-buttons"></div>
         <div className="trail-bottom">
-          <div>
+          <div className="trail-bottom-info">
             <p>{trail.summary}</p>
             <p>{trail.description}</p>
             <p>{trail.length}</p>
