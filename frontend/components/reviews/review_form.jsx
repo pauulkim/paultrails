@@ -48,14 +48,17 @@ class ReviewForm extends React.Component {
 
     return (
       <div>
-        <button onClick={loggedIn ? this.onLoggedInClick : this.onLoggedOffClick}>{this.props.buttonText}</button>
+        <div className="review-button-container">
+          <button className="review-button" onClick={loggedIn ? this.onLoggedInClick : this.onLoggedOffClick}>{this.props.buttonText}</button>
+        </div>
         {
           (!this.state.displayReviewForm) ? null :
           (
-            <div className="review-form-container">
+            <div className="review-form-container" onClick={this.onLoggedInClick}>
               <form className="review-form" onSubmit={this.handleSubmit}>
-                <div onClick={this.onLoggedInClick}>x</div>
+                <div className="review-form-x" onClick={this.onLoggedInClick}>x</div>
                 <h2>{trailName}</h2>
+                
                 <label>
                   <input 
                     type="text"

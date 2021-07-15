@@ -1,8 +1,22 @@
-.review-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.review-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.review-button {
+  width: 188px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background: #428A13;
+  color: #FFFFFF;
+  cursor: pointer;
 }
 
 .review-form-container {
@@ -13,4 +27,34 @@
   left: 0;
   background: rgba(0, 0, 0, 0.7);
   z-index: 10;
+}
+
+.review-form {
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  width: 560px;
+  height: 583px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.review-form-x {
+  color: #767676;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.review-form > h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #414141;
+  line-height: 1.13;
+  overflow: hidden;
+  max-height: 72px;
+  padding: 24px;
 }
