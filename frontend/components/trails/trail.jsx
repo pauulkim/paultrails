@@ -74,10 +74,10 @@ class Trail extends React.Component {
                 <p className="trail-other-item">{trail.route_type}</p>
               </div>
             </div>
-            <div className="trail-description-container">
+            <div className="trail-tabs">
               <p>Description</p>
             </div>
-            <p>{trail.description}</p>
+            <p className="trail-description">{trail.description}</p>
             <p>{`${trail.lat}, ${trail.long}`}</p>
             <ReviewForm formState={formState} trailName={trail.name} actionType={makeReview} loggedIn={loggedIn} history={this.props.history} buttonText={"Write review"}/>
             <TrailReviewIndex trailName={trail.name} loggedIn={loggedIn} currentUser={currentUser} reviews={reviews} editReview={editReview} removeReview={removeReview} buttonText={"Edit"} />
