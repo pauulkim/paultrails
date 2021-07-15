@@ -1,6 +1,7 @@
 import React from "react";
 import TrailReviewIndex from "./trail_review_index";
 import ReviewForm from "../reviews/review_form";
+import ReactStars from "react-rating-stars-component";
 
 class Trail extends React.Component {
   constructor(props) {
@@ -29,24 +30,40 @@ class Trail extends React.Component {
       trail_id: trailId,
       displayReviewForm: false
     };
+
     
     if (!trail) return null;
 
+    let className;  
+    if (trail) className = trail.difficulty;
+
     return (
       <div className="trail-container">
-        <img src="https://paultrails-seeds.s3.us-west-1.amazonaws.com/home_page.jpg" alt="trail.jpg"/>
+        <div className="trail-top-section">
+          <img src="https://paultrails-seeds.s3.us-west-1.amazonaws.com/home_page.jpg" alt="trail.jpg"/>
+          <div className="trail-top-header">
+            <h2>{trail.name}</h2>
+            <div className="park-trail-stars-diff">
+              <p className={`${className} difficulty-buttons`}>{trail.difficulty}</p>
+              <ReactStars 
+                count={5} 
+                value={5}
+                color="lightgray"
+                size={18}
+                edit={false}
+              /> 
+            </div>
+          </div>
+        </div>
+        <div className="trail-top-buttons"></div>
         <div>
-          <h2>{trail.name}</h2>
           <p>{trail.summary}</p>
           <p>{trail.description}</p>
-          <p>{trail.difficulty}</p>
           <p>{trail.length}</p>
           <p>{trail.elevation_gain}</p>
           <p>{trail.route_type}</p>
           <p>{`${trail.lat}, ${trail.long}`}</p>
           <ReviewForm formState={formState} trailName={trail.name} actionType={makeReview} loggedIn={loggedIn} history={this.props.history} buttonText={"Write review"}/>
-        </div>
-        <div>
           <TrailReviewIndex trailName={trail.name} loggedIn={loggedIn} currentUser={currentUser} reviews={reviews} editReview={editReview} removeReview={removeReview} buttonText={"Edit"} />
         </div>
       </div>
