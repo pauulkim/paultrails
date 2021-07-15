@@ -2,6 +2,7 @@ import React from "react";
 import TrailReviewIndex from "./trail_review_index";
 import ReviewForm from "../reviews/review_form";
 import ReactStars from "react-rating-stars-component";
+import Map from "../maps/map";
 
 class Trail extends React.Component {
   constructor(props) {
@@ -56,15 +57,18 @@ class Trail extends React.Component {
           </div>
         </div>
         <div className="trail-top-buttons"></div>
-        <div>
-          <p>{trail.summary}</p>
-          <p>{trail.description}</p>
-          <p>{trail.length}</p>
-          <p>{trail.elevation_gain}</p>
-          <p>{trail.route_type}</p>
-          <p>{`${trail.lat}, ${trail.long}`}</p>
-          <ReviewForm formState={formState} trailName={trail.name} actionType={makeReview} loggedIn={loggedIn} history={this.props.history} buttonText={"Write review"}/>
-          <TrailReviewIndex trailName={trail.name} loggedIn={loggedIn} currentUser={currentUser} reviews={reviews} editReview={editReview} removeReview={removeReview} buttonText={"Edit"} />
+        <div className="trail-bottom">
+          <div>
+            <p>{trail.summary}</p>
+            <p>{trail.description}</p>
+            <p>{trail.length}</p>
+            <p>{trail.elevation_gain}</p>
+            <p>{trail.route_type}</p>
+            <p>{`${trail.lat}, ${trail.long}`}</p>
+            <ReviewForm formState={formState} trailName={trail.name} actionType={makeReview} loggedIn={loggedIn} history={this.props.history} buttonText={"Write review"}/>
+            <TrailReviewIndex trailName={trail.name} loggedIn={loggedIn} currentUser={currentUser} reviews={reviews} editReview={editReview} removeReview={removeReview} buttonText={"Edit"} />
+          </div>
+          <Map lat={trail.lat} long={trail.long} type="trail-map"/>
         </div>
       </div>
     )
