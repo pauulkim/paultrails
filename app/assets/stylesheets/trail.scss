@@ -14,6 +14,8 @@
   position: relative;
   height: 312px;
   width: 100%;
+  border-right: 1px solid #909090;
+  border-left: 1px solid #909090;
 }
 
 .trail-top-section > img {
@@ -40,10 +42,15 @@
 .trail-top-buttons {
   height: 55px;
   background: #428a13;
+  border-right: 1px solid #909090;
+  border-left: 1px solid #909090;
 }
 
 .trail-bottom {
   display: flex;
+  border-right: 1px solid #909090;
+  border-left: 1px solid #909090;
+  border-bottom: 1px solid #909090
 }
 
 .trail-bottom-info {
@@ -51,9 +58,13 @@
   flex-direction: column;
 }
 
-
-
-
+.trail-summary {
+  color: #414141;
+  font-size: 18px;
+  line-height: 1.44;
+  padding: 24px;
+  border-bottom: 1px solid #E6E6E6;
+}
 
 
 
