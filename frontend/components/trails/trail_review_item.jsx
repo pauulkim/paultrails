@@ -35,7 +35,7 @@ class TrailReviewItem extends React.Component {
           (review.user_id === currentUser) ?
           (
             <div>
-              <ReviewForm formState={formState} trailName={trailName} loggedIn={loggedIn} actionType={editReview} reviewId={review.id} update={true} buttonText={buttonText}/>
+              <ReviewForm formState={formState} trailName={trailName} loggedIn={loggedIn} actionType={editReview} reviewId={review.id} update={true} buttonText={buttonText} formName="edit"/>
               <button onClick={this.deleteReview}>Delete</button>
             </div>
           ) : null

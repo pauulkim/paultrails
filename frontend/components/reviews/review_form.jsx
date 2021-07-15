@@ -52,13 +52,13 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-    let { trailName, loggedIn } = this.props;
-    // console.log(this.state);
+    let { trailName, loggedIn, formName } = this.props;
+    // console.log(this.props.formName);
 
     return (
       <div>
-        <div className="review-button-container">
-          <button className="review-button" onClick={loggedIn ? this.onLoggedInClick : this.onLoggedOffClick}>{this.props.buttonText}</button>
+        <div className={formName === "create" ? "review-button-container" : ""}>
+          <button className={formName === "create" ? "review-button" : ""} onClick={loggedIn ? this.onLoggedInClick : this.onLoggedOffClick}>{this.props.buttonText}</button>
         </div>
         {
           (!this.state.displayReviewForm) ? null :
