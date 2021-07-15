@@ -60,10 +60,24 @@ class Trail extends React.Component {
         <div className="trail-bottom">
           <div className="trail-bottom-info">
             <p className="trail-summary">{trail.summary}</p>
+            <div className="trail-other-info">
+              <div>
+                <p className="trail-other-title">Length</p>
+                <p className="trail-other-item">{trail.length} mi</p>
+              </div>
+              <div>
+                <p className="trail-other-title">Elevation gain</p>
+                <p className="trail-other-item">{trail.elevation_gain}</p>
+              </div>
+              <div>
+                <p className="trail-other-title">Route type</p>
+                <p className="trail-other-item">{trail.route_type}</p>
+              </div>
+            </div>
+            <div className="trail-description-container">
+              <p>Description</p>
+            </div>
             <p>{trail.description}</p>
-            <p>{trail.length}</p>
-            <p>{trail.elevation_gain}</p>
-            <p>{trail.route_type}</p>
             <p>{`${trail.lat}, ${trail.long}`}</p>
             <ReviewForm formState={formState} trailName={trail.name} actionType={makeReview} loggedIn={loggedIn} history={this.props.history} buttonText={"Write review"}/>
             <TrailReviewIndex trailName={trail.name} loggedIn={loggedIn} currentUser={currentUser} reviews={reviews} editReview={editReview} removeReview={removeReview} buttonText={"Edit"} />

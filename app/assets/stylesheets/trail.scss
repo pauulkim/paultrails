@@ -56,24 +56,55 @@
 .trail-bottom-info {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  border-right: 1px solid #E6E6E6;
 }
 
 .trail-summary {
   color: #414141;
   font-size: 18px;
   line-height: 1.44;
-  padding: 24px;
+  padding: 24px 0;
+  margin: 0 24px; 
   border-bottom: 1px solid #E6E6E6;
+  overflow: hidden;
+  height: 100%;
+}
+
+.trail-other-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.trail-other-title {
+  color: #5a5a5a;
+  font-size: 12px;
+  line-height: 1.42;
+  width: auto;
+}
+
+.trail-other-item {
+  color: #414141;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.38;
+  width: auto;
+}
+
+// working on this
+.trail-description-container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 10px 0;
+  // continue here
 }
 
 
 
-
-
-
-
 .trail-map {
-  width: 100%;
+  width: 350px;
   height: 240px;
   border-radius: 8px;
   margin: 24px;
