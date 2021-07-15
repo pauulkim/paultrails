@@ -24,7 +24,7 @@ class Trail extends React.Component {
   render() {
     let { trailId, trail, loggedIn, currentUser, reviews, makeReview, editReview, removeReview } = this.props;
     let formState = {
-      rating: "",
+      rating: 0,
       activity_date: "",
       review_description: "",
       user_id: currentUser,

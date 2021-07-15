@@ -1,4 +1,5 @@
 import React from "react";
+import ReactStars from "react-rating-stars-component";
 
 class ReviewForm extends React.Component {
   constructor(props) {
@@ -8,6 +9,8 @@ class ReviewForm extends React.Component {
 
     this.onLoggedInClick = this.onLoggedInClick.bind(this);
     this.onLoggedOffClick = this.onLoggedOffClick.bind(this);
+
+    this.stars_update = this.stars_update.bind(this);
 
     this.handleSubmit = this.handleSubmit.bind(this);
   };
@@ -29,6 +32,12 @@ class ReviewForm extends React.Component {
       })
     };
   };
+
+  stars_update(rating) {
+    this.setState({
+      rating: rating
+    })
+  }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -54,12 +63,18 @@ class ReviewForm extends React.Component {
         {
           (!this.state.displayReviewForm) ? null :
           (
-            <div className="review-form-container" onClick={this.onLoggedInClick}>
+            <div className="review-form-container">
               <form className="review-form" onSubmit={this.handleSubmit}>
                 <div className="review-form-x" onClick={this.onLoggedInClick}>x</div>
                 <h2>{trailName}</h2>
-                
-                <label>
+                <ReactStars 
+                  count={5}
+                  value={this.state.rating}
+                  color="lightgray"
+                  size={40}
+                  onChange={this.stars_update}
+                /> 
+                {/* <label>
                   <input 
                     type="text"
                     placeholder="Rating"
@@ -67,22 +82,31 @@ class ReviewForm extends React.Component {
                     onChange={this.update("rating")}
                     required
                   />
-                </label>
-                <label>
-                  <input 
-                    type="date"
-                    value={this.state.activity_date}
-                    onChange={this.update("activity_date")}
+                </label> */}
+                <div className="trail-activity-container">
+                  <label>Activity Date  
+                    <input 
+                      className="trail-activity-input"
+                      type="date"
+                      value={this.state.activity_date}
+                      onChange={this.update("activity_date")}
+                      required
+                    />
+                  </label>
+                </div>
+                <div className="trail-review-textarea-container">
+                  <textarea 
+                    className="trail-review-textarea"
+                    placeholder="Give back to the community. Share your thoughts about the trail!"
+                    value={this.state.review_description}
+                    onChange={this.update("review_description")}
                     required
                   />
-                </label>
-                <textarea 
-                  placeholder="Give back to the community. Share your thoughts about the trail!"
-                  value={this.state.review_description}
-                  onChange={this.update("review_description")}
-                  required
-                />
-                <button>Post</button>
+                </div>
+                <div className="trail-review-post-container">
+                  <button>Post</button>
+                </div>
+
               </form>
             </div>
           )
