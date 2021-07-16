@@ -1,4 +1,5 @@
 import React from "react";
+import ReactStars from "react-rating-stars-component";
 import ReviewForm from "../reviews/review_form";
 
 class TrailReviewItem extends React.Component {
@@ -24,22 +25,30 @@ class TrailReviewItem extends React.Component {
     };
 
     return (
-      <div>
-        <h3>{review.name}</h3>
-        <p>Rating: {review.rating}/5</p>
-        <p>{review.activity_date}</p>
-        <p>{review.review_description}</p>
-        <p>User Id: {review.user_id}</p>
-        <p>Trail Id: {review.trail_id}</p>
-        {
-          (review.user_id === currentUser) ?
-          (
-            <div>
-              <ReviewForm formState={formState} trailName={trailName} loggedIn={loggedIn} actionType={editReview} reviewId={review.id} update={true} buttonText={buttonText} formName="edit"/>
-              <button onClick={this.deleteReview}>Delete</button>
-            </div>
-          ) : null
-        }
+      <div className="trail-reviews-container">
+        <div className="trail-reviews-inner">
+          <h3>{review.name}</h3>
+          <div className="trail-review-stars-date">
+            <ReactStars 
+              count={5} 
+              value={review.rating}
+              color="lightgray"
+              size={18}
+              edit={false}
+            /> 
+            <p>{review.activity_date}</p>
+          </div>
+          <p className="trail-review-description">{review.review_description}</p>
+          {
+            (review.user_id === currentUser) ?
+            (
+              <div className="edit-delete-container">
+                <button className="delete-button" onClick={this.deleteReview}>Delete</button>
+                <ReviewForm formState={formState} trailName={trailName} loggedIn={loggedIn} actionType={editReview} reviewId={review.id} update={true} buttonText={buttonText} formName="edit"/>
+              </div>
+            ) : null
+          }
+        </div>
       </div>
     )
   }
