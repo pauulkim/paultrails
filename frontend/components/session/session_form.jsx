@@ -92,7 +92,13 @@ class SessionForm extends React.Component {
 
               <button>{formType}</button>
               <button onClick={this.demo}>Demo User</button>
-              <p>{errors}</p>
+
+              <ul className="session-errors-container">
+                {errors.map( (error, idx) => (
+                  <li key={idx}>{error}</li>
+                ))}
+              </ul>
+
               <div className="other-form">
                 <p>{otherText}</p>
                 <p className="other-form-link">{otherForm}</p>
