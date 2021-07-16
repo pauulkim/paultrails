@@ -41,14 +41,25 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({
-      displayReviewForm: !this.state.displayReviewForm
-    });
+    
     if (this.props.update) {
       this.props.actionType(this.state, this.props.reviewId);
     } else {
       this.props.actionType(this.state);
     };
+    
+    if (this.props.update) {
+      this.setState({
+        displayReviewForm: !this.state.displayReviewForm
+      });
+    } else {
+      this.setState({
+        rating: 0,
+        activity_date: "",
+        review_description: "",
+        displayReviewForm: !this.state.displayReviewForm
+      });
+    }
   }
 
   render() {
