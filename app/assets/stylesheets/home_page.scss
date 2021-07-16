@@ -2,7 +2,7 @@
   position: relative;
   text-align: center;
   color: white;
-  height: 800px;
+  height: 600px;
 }
 
 .home-page-image {
@@ -17,4 +17,37 @@
   transform: translate(-50%, -50%);
   font-size: 64px;
   font-family: Metropolis-Regular;
+}
+
+
+
+
+
+
+
+
+
+.temporary-home-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 30px;
+  font-family: Metropolis-Regular;
+  height: 150px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.temporary-home-links-container > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 #5a5a5a;
+  padding: 16px;
+  width: 275px;
+  height: 100px;
+  color: #414141;
+  text-align: center;
 }
