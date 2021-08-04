@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     end
 
     resources :reviews, only: [:create, :update, :destroy]
+
+    resources :search, only: [:index]
   end
 
   root 'static_pages#root'
