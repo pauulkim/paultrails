@@ -1,4 +1,13 @@
 import { connect } from "react-redux";
 import Home from "./home_page";
+import { requestSearchResults } from "../../actions/search_actions"
 
-export default connect(null, null)(Home);
+const mSTP = state => ({
+  search: state.entities.search
+});
+
+const mDTP = dispatch => ({
+  requestSearchResults: () => dispatch(requestSearchResults())
+})
+
+export default connect(mSTP, mDTP)(Home);
