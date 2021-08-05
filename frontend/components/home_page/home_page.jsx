@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Home = (props) => {
-  console.log(props)
+
+  useEffect(() => {
+    props.requestSearchResults()
+  }, [])
+
   return (
     <div>
       <div className="home-page-wrapper">
