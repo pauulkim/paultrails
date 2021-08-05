@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import SearchBar from "../search_bar/search_bar";
 
 const Home = (props) => {
 
@@ -13,6 +14,7 @@ const Home = (props) => {
         <img className="home-page-image" src={"https://paultrails-seeds.s3.us-west-1.amazonaws.com/home_page.jpg"} alt="homepage.jpg"/>
         <div className="home-page-main-content">
           <h1>Find your next adventure</h1>
+          <SearchBar search={props.search} />
         </div>
         {/* <h1 className="home-page-greeting">Find your next adventure</h1>
         <h1 className="home-page-greeting">sdf</h1> */}
