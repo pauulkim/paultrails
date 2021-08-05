@@ -1,6 +1,8 @@
 class Api::SearchController < ApplicationController
   def index
-    @search = Park.all
+    parks = Park.all.select("id, name")
+    trails = Trail.all.select("id, name")
+    @search = parks + trails
     render :index
   end
 end
