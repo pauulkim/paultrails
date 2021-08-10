@@ -43,13 +43,6 @@ const SearchBar = ({ search }) => {
               </li>
             )
       }
-      {/* <ul>
-        { 
-          searchResults.map( res => 
-            <li>{res.name}</li>
-          )
-        }
-      </ul> */}
     </div>
   )
 };
