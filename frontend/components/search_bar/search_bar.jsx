@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const SearchBar = ({ search }) => {
   console.log(search);
   
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+
+  const isFirstRun = useRef(true);
   
   console.log(searchTerm);
 
@@ -13,14 +15,16 @@ const SearchBar = ({ search }) => {
   };
 
   useEffect( () => {
-    // need to fix this logic
-    if (search.isArray) {
-      const results = search.filter( item => 
-        item.name.toLowerCase().includes(searchTerm)
-      );
-  
-      setSearchResults(results);
+    if (isFirstRun.current) {
+      isFirstRun.current = false;
+      return;
     }
+
+    const results = search.filter( item => 
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    setSearchResults(results);
 
   }, [searchTerm])
 
@@ -28,6 +32,7 @@ const SearchBar = ({ search }) => {
     <div>
       <input 
         type="text"
+        placeholder="search"
         value={searchTerm}
         onChange={changeSearchTerm}
       />
