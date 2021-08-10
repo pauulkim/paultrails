@@ -1,15 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const SearchBar = ({ search }) => {
-  console.log(search);
-  
+const SearchBar = ({ search }) => {  
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-
-  const isFirstRun = useRef(true);
+  const isFirstRun = useRef(true); // sets variable to true and lasts full lifecycle
   
-  console.log(searchTerm);
-
   const changeSearchTerm = e => {
     setSearchTerm(e.target.value);
   };
