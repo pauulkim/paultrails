@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const SearchBar = ({ search }) => {  
   const [searchTerm, setSearchTerm] = useState("");
@@ -31,13 +32,18 @@ const SearchBar = ({ search }) => {
         value={searchTerm}
         onChange={changeSearchTerm}
       />
-      <ul>
+      { 
+        searchResults.map( res => 
+          <Link to={"/parks/1"}>{res.name}</Link>
+        )
+      }
+      {/* <ul>
         { 
           searchResults.map( res => 
             <li>{res.name}</li>
           )
         }
-      </ul>
+      </ul> */}
     </div>
   )
 };

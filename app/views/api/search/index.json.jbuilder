@@ -1,7 +1,7 @@
 json.array! @search do |s|
   if s.class == Park
     json.extract! s, :id, :name
-    json.type "park"
+    json.type "parks"
   else 
     json.extract! s, :id, :name
     json.type "trail"
