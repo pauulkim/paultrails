@@ -33,11 +33,15 @@ const SearchBar = ({ search }) => {
         onChange={changeSearchTerm}
       />
       { 
-        searchResults.map( (res, idx) => 
-          <li key={idx}>
-            <Link to={`/${res.type}/${res.id}`}>{res.name}</Link>
-          </li>
-        )
+        searchTerm === "" 
+          ? 
+            null 
+          :
+            searchResults.map( (res, idx) => 
+              <li key={idx}>
+                <Link to={`/${res.type}/${res.id}`}>{res.name}</Link>
+              </li>
+            )
       }
       {/* <ul>
         { 
