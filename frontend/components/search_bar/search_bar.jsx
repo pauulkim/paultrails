@@ -25,10 +25,10 @@ const SearchBar = ({ search }) => {
   }, [searchTerm])
 
   return (
-    <div>
+    <>
       <input 
         type="text"
-        placeholder="search"
+        placeholder="Search by park or trail name"
         value={searchTerm}
         onChange={changeSearchTerm}
       />
@@ -43,7 +43,7 @@ const SearchBar = ({ search }) => {
               </li>
             )
       }
-    </div>
+    </>
   )
 };
 
