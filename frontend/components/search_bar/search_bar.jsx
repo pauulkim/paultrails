@@ -28,6 +28,7 @@ const SearchBar = ({ search }) => {
     <>
       <div className="search-bar-container">
         <div className="inner-search1-container">
+          <i class="fas fa-search"></i>
           <input 
             type="text"
             placeholder="Search by park or trail name"
