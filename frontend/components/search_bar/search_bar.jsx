@@ -26,23 +26,28 @@ const SearchBar = ({ search }) => {
 
   return (
     <div className="search-bar-container">
-      <input 
-        type="text"
-        placeholder="Search by park or trail name"
-        value={searchTerm}
-        onChange={changeSearchTerm}
-      />
-      { 
-        searchTerm === "" 
-          ? 
-            null 
-          :
-            searchResults.map( (res, idx) => 
-              <li key={idx}>
-                <Link to={`/${res.type}/${res.id}`}>{res.name}</Link>
-              </li>
-            )
-      }
+      <div className="inner-search1-container">
+        <div>
+          <input 
+            type="text"
+            placeholder="Search by park or trail name"
+            value={searchTerm}
+            onChange={changeSearchTerm}
+            className="test"
+          />
+          { 
+            searchTerm === "" 
+              ? 
+                null 
+              :
+                searchResults.map( (res, idx) => 
+                  <li key={idx}>
+                    <Link to={`/${res.type}/${res.id}`}>{res.name}</Link>
+                  </li>
+                )
+          }
+        </div>
+      </div>
     </div>
   )
 };

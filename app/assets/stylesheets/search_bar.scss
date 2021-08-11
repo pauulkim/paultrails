@@ -1,4 +1,19 @@
 .search-bar-container {
+  position: relative;
+  z-index: 5;
+  top: -36px;
+}
+
+.inner-search1-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filler {
+  height: 72px;
+  max-width: 676px;
+  width: 100%;
   padding: 0 16px;
-  height: 58px;
+  
 }
