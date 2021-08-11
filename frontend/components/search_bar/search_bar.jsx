@@ -25,7 +25,7 @@ const SearchBar = ({ search }) => {
   }, [searchTerm])
 
   return (
-    <>
+    <div className="search-bar-container">
       <input 
         type="text"
         placeholder="Search by park or trail name"
@@ -43,7 +43,7 @@ const SearchBar = ({ search }) => {
               </li>
             )
       }
-    </>
+    </div>
   )
 };
 

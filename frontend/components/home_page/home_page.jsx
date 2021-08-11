@@ -13,9 +13,7 @@ const Home = (props) => {
         <img className="home-page-image" src={"https://paultrails-seeds.s3.us-west-1.amazonaws.com/home_page.jpg"} alt="homepage.jpg"/>
         <h1 className="home-page-header">Find your next adventure</h1>
       </div>
-      <div>
-        <SearchBar search={props.search} />
-      </div>
+      <SearchBar search={props.search} />
     </div>
   )
 };
