@@ -9,7 +9,7 @@ export const ParkTrailItem = ({ trail, parkName }) => {
   return (
     <div>
       <Link className="park-trail-item" to={`/trail/${trail.id}`}>
-        <img src={"https://paultrails-seeds.s3.us-west-1.amazonaws.com/session_form_img.jpg"} alt="ziontrails.jpg"/>
+        <img src={trail.trailPhoto} alt="ziontrails.jpg"/>
         <div className="park-trail-item-info">
           <h2>{trail.name}</h2>
           <h4>{parkName}</h4>

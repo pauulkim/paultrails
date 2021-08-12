@@ -41,7 +41,7 @@ class Trail extends React.Component {
     return (
       <div className="trail-container">
         <div className="trail-top-section">
-          <img src="https://paultrails-seeds.s3.us-west-1.amazonaws.com/home_page.jpg" alt="trail.jpg"/>
+          <img src={trail.trailPhoto} alt="trail.jpg"/>
           <div className="trail-top-header">
             <h2>{trail.name}</h2>
             <div className="park-trail-stars-diff">
