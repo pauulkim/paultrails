@@ -28,7 +28,7 @@ const SearchBar = ({ search }) => {
     <>
       <div className="search-bar-container">
         <div className="inner-search1-container">
-          <i class="fas fa-search"></i>
+          <i className="fas fa-search"></i>
           <input 
             type="text"
             placeholder="Search by park or trail name"
@@ -46,9 +46,9 @@ const SearchBar = ({ search }) => {
               <div className="search-results-container">
                 <div className="search-results-inner-container">
                   {
-                    searchResults.map( (res) => 
-                      <Link className="search-result" to={`/${res.type}/${res.id}`}>
-                        {res.type === "parks" ? <i class="fas fa-tree fa-lg"></i> : <i class="fas fa-map-signs fa-lg"></i>}
+                    searchResults.map( (res, idx) => 
+                      <Link className="search-result" to={`/${res.type}/${res.id}`} key={idx}>
+                        {res.type === "parks" ? <i className="fas fa-tree fa-lg"></i> : <i className="fas fa-map-signs fa-lg"></i>}
                         <h1>{res.name}</h1>
                       </Link>
                     )
