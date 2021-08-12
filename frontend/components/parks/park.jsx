@@ -29,7 +29,7 @@ class Park extends React.Component {
     
     return (
       <div className="park-container">
-        <img src="https://paultrails-seeds.s3.us-west-1.amazonaws.com/session_form_img.jpg" alt="park.jpg"/>
+        <img src={park.parkPhoto} alt="park.jpg"/>
         <div className="park-info">
           <h1 className="park-title">{park.name}</h1>
           <ReactStars 
