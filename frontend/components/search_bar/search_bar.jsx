@@ -38,19 +38,23 @@ const SearchBar = ({ search }) => {
           />
         </div>
       </div>
-      <div className="search-results-container">
         { 
           searchTerm === "" 
             ? 
               null 
             :
-              searchResults.map( (res, idx) => 
-                <li key={idx}>
-                  <Link to={`/${res.type}/${res.id}`}>{res.name}</Link>
-                </li>
-              )
+              <div className="search-results-container">
+                <div className="search-results">
+                  {
+                    searchResults.map( (res, idx) => 
+                      <li key={idx}>
+                        <Link to={`/${res.type}/${res.id}`}>{res.name}</Link>
+                      </li>
+                    )
+                  }
+                </div>
+              </div>
         }
-      </div>
     </>
   )
 };
