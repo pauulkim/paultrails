@@ -46,10 +46,13 @@ const SearchBar = ({ search }) => {
               <div className="search-results-container">
                 <div className="search-results-inner-container">
                   {
-                    searchResults.map( (res, idx) => 
-                      <li key={idx}>
-                        <Link to={`/${res.type}/${res.id}`}>{res.name}</Link>
-                      </li>
+                    searchResults.map( (res) => 
+                      <Link className="search-result" to={`/${res.type}/${res.id}`}>
+                        {res.type === "parks" ? <i class="fas fa-tree fa-lg"></i> : <i class="fas fa-map-signs fa-lg"></i>}
+                        <div>
+                          {res.name}
+                        </div>
+                      </Link>
                     )
                   }
                 </div>
