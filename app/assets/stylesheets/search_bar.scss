@@ -20,6 +20,29 @@
   box-shadow: 0 2px 24px 0;
 }
 
+.inner-search1-container > i {
+  color: #909090;
+  width: 16px;
+  height: 16px;
+}
+
+.search-input {
+  font-family: Metropolis-Regular;
+  color: #414141;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.33;
+  flex-grow: 1;
+  margin: 0 16px;
+  padding: 14px 0;
+  border: none;
+  outline: none;
+}
+
+
+
+
+
 .search-results-container {
   position: relative;
   z-index: 6;
@@ -29,4 +52,3 @@
   // justify-content: center;
   flex-direction: column;
 }
-
