@@ -44,7 +44,7 @@ const SearchBar = ({ search }) => {
               null 
             :
               <div className="search-results-container">
-                <div className="search-results">
+                <div className="search-results-inner-container">
                   {
                     searchResults.map( (res, idx) => 
                       <li key={idx}>
