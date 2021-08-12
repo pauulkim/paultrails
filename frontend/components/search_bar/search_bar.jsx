@@ -49,9 +49,7 @@ const SearchBar = ({ search }) => {
                     searchResults.map( (res) => 
                       <Link className="search-result" to={`/${res.type}/${res.id}`}>
                         {res.type === "parks" ? <i class="fas fa-tree fa-lg"></i> : <i class="fas fa-map-signs fa-lg"></i>}
-                        <div>
-                          {res.name}
-                        </div>
+                        <h1>{res.name}</h1>
                       </Link>
                     )
                   }

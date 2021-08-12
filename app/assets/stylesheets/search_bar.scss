@@ -87,3 +87,15 @@
   background: #f2f2f2;
   color: #428a13;
 }
+
+.search-result > h1 {
+  font-family: Metropolis-Regular;
+  color: #414141;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.33;
+  margin-left: 16px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
