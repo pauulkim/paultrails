@@ -42,6 +42,6 @@
   "homepage": "https://github.com/pauulkim/paultrails#readme",
   "engines": {
     "node": "16.5.0",
-    "npm": "6.4.1"
+    "npm": "7.19.1"
   }
 }
