@@ -153,26 +153,26 @@ r13 = Review.create(rating: 4, activity_date: DateTime.new(2021, 1, 1), review_d
 
 
 # photos
-zion_png = open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/zion.png")
-zion.park_photo.attach(io: zion_png, filename: "https://paultrails-seeds.s3.us-west-1.amazonaws.com/zion.png")
+zion_png = URI.open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/zion.png")
+zion.park_photo.attach(io: zion_png, filename: "zion.png")
 
-# hallasan_png = open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/hallasan.png")
-# hallasan.park_photo.attach(io: hallasan_png, filename: "hallasan.png")
+hallasan_png = URI.open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/hallasan.png")
+hallasan.park_photo.attach(io: hallasan_png, filename: "hallasan.png")
 
-# angels_landing_jpg = open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/angels_landing.jpg")
-# z1.trail_photo.attach(io: angels_landing_jpg, filename: "angels_landing.jpg")
+angels_landing_jpg = URI.open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/angels_landing.jpg")
+z1.trail_photo.attach(io: angels_landing_jpg, filename: "angels_landing.jpg")
 
-# zion_narrows_jpg = open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/zion_narrows.jpg")
-# z2.trail_photo.attach(io: zion_narrows_jpg, filename: "zion_narrows.jpg")
+zion_narrows_jpg = URI.open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/zion_narrows.jpg")
+z2.trail_photo.attach(io: zion_narrows_jpg, filename: "zion_narrows.jpg")
 
-# zion_canyon_jpg = open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/zion_canyon.jpg")
-# z3.trail_photo.attach(io: zion_canyon_jpg, filename: "zion_canyon.jpg")
+zion_canyon_jpg = URI.open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/zion_canyon.jpg")
+z3.trail_photo.attach(io: zion_canyon_jpg, filename: "zion_canyon.jpg")
 
-# hallasan_summit_jpg = open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/hallasan_summit.jpg")
-# h1.trail_photo.attach(io: hallasan_summit_jpg, filename: "hallasan_summit.jpg")
+hallasan_summit_jpg = URI.open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/hallasan_summit.jpg")
+h1.trail_photo.attach(io: hallasan_summit_jpg, filename: "hallasan_summit.jpg")
 
-# sara_oreum_jpg = open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/sara_oreum.jpg")
-# h2.trail_photo.attach(io: sara_oreum_jpg, filename: "sara_oreum.jpg")
+sara_oreum_jpg = URI.open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/sara_oreum.jpg")
+h2.trail_photo.attach(io: sara_oreum_jpg, filename: "sara_oreum.jpg")
 
-# halla_eco_forest_jpg = open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/halla_eco_forest.jpg")
-# h3.trail_photo.attach(io: halla_eco_forest_jpg, filename: "halla_eco_forest.jpg")
+halla_eco_forest_jpg = URI.open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/halla_eco_forest.jpg")
+h3.trail_photo.attach(io: halla_eco_forest_jpg, filename: "halla_eco_forest.jpg")
