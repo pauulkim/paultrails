@@ -174,5 +174,5 @@ h1.trail_photo.attach(io: hallasan_summit_jpg, filename: "hallasan_summit.jpg")
 sara_oreum_jpg = URI.open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/sara_oreum.jpg")
 h2.trail_photo.attach(io: sara_oreum_jpg, filename: "sara_oreum.jpg")
 
-halla_eco_forest_jpg = URI.open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/halla_eco_forest.jpg")
-h3.trail_photo.attach(io: halla_eco_forest_jpg, filename: "halla_eco_forest.jpg")
+# halla_eco_forest_jpg = URI.open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/halla_eco_forest.jpg")
+# h3.trail_photo.attach(io: halla_eco_forest_jpg, filename: "halla_eco_forest.jpg")
