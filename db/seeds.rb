@@ -153,10 +153,11 @@ r13 = Review.create(rating: 4, activity_date: DateTime.new(2021, 1, 1), review_d
 
 
 # photos
-zion = Park.find(1)
-zion.park_photo.attach(io: File.open("/mnt/c/Users/paulw/Desktop/halla_eco_forest.jpg"), filename: "halla_eco_forest.jpg")
-# home_page = open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/home_page.jpg")
-# test2 = open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/dante-labella-T3rJ98XVrRo-unsplash.jpg")
+zion_png = open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/zion.png")
+zion.park_photo.attach(io: zion_png, filename: "zion.png")
 
-# z1.trail_photos.attach(io: home_page, filename: "test1.jpg")
-# z1.trail_photos.attach(io: test2, filename: "test2.jpg")
+hallasan_png = open("https://paultrails-seeds.s3.us-west-1.amazonaws.com/hallasan.png")
+hallasan.park_photo.attach(io: hallasan_png, filename: "hallasan.png")
+
+# file = open("")
+# .trail_photo.attach(io: file, filename: "")
