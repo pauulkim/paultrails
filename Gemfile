@@ -10,6 +10,7 @@ gem 'pry-rails'
 gem 'annotate'
 gem 'bcrypt'
 gem 'jquery-rails'
+gem 'open-uri'
 # gem "figaro"
 
 # aws
