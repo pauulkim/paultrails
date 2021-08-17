@@ -2,5 +2,15 @@
   position: fixed;
   bottom: 0;
   font-family: Metropolis-Regular;
+  height: 90px;
+  width: 100%;
+  background: #428a13;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.left-footer-container {
+  display: flex;
+  align-items: center;
+}

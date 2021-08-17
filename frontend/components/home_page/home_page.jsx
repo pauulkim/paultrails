@@ -15,9 +15,12 @@ const Home = (props) => {
       </div>
       <SearchBar search={props.search} />
       <footer className="footer-container">
-        <div>
-          <i className="fas fa-mountain logo"></i>
+        <div className="left-footer-container">
+          <i className="fas fa-mountain"></i>
           <p>PaulTrails</p>
+        </div>
+        <div>
+          other
         </div>
       </footer>
     </div>
