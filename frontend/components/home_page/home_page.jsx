@@ -14,6 +14,9 @@ const Home = (props) => {
         <h1 className="home-page-header">Find your next adventure</h1>
       </div>
       <SearchBar search={props.search} />
+      <footer className="footer-container">
+        <p>Hello</p>
+      </footer>
     </div>
   )
 };
