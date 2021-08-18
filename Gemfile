@@ -11,7 +11,7 @@ gem 'annotate'
 gem 'bcrypt'
 gem 'jquery-rails'
 gem 'open-uri'
-# gem "figaro"
+gem "figaro"
 
 # aws
 gem 'aws-sdk-s3'
