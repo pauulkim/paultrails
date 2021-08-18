@@ -31,7 +31,7 @@ const SearchBar = ({ search }) => {
           <i className="fas fa-search"></i>
           <input 
             type="text"
-            placeholder="Search by park or trail name"
+            placeholder="Try searching for Zion National Park!"
             value={searchTerm}
             onChange={changeSearchTerm}
             className="search-input"
