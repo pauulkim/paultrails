@@ -20,7 +20,7 @@ const SearchBar = ({ search }) => {
       item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    setSearchResults(results);
+    setSearchResults(results.sort( (a, b) => (a.name > b.name) ? 1 : -1));
 
   }, [searchTerm])
 
