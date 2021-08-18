@@ -19,8 +19,10 @@ const Home = (props) => {
           <i className="fas fa-mountain bottom-logo"></i>
           <p className="bottom-header">PaulTrails</p>
         </div>
-        <div>
-          other
+        <div className="right-footer-container">
+          <a href="https://github.com/pauulkim"><i className="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/pauulkim/"><i className="fab fa-linkedin"></i></a>
+          <a href="https://angel.co/u/paulkim36"><i className="fab fa-angellist"></i></a>
         </div>
       </footer>
     </div>
