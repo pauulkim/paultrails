@@ -36,3 +36,4 @@ npm-debug.log
 /public/assets
 # Ignore application configuration
 /config/application.yml
+.google_maps_key.rb

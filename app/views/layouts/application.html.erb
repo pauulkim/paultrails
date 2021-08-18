@@ -5,7 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
       
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=" %>
+    <% require_relative "../../../.google_maps_key.rb" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{$google_api_key}" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
