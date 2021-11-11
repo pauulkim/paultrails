@@ -73,5 +73,3 @@ These fields were then used to populate the values within the HTML elements in t
 </label>
 <textarea value={this.state.review_description}/>
 ```
-
-test
